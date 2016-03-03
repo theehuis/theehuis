@@ -71,17 +71,3 @@ angular.module('theehuis', ['ionic', 'starter.controllers'])
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/playlists');
 });
-
-$scope.posts = [];
-$scope.wordpress.useWordpress = function () {
-  $http.get(wordpressUrl)
-    .succes(function(response){
-      console.log("Received getPosts via HTTP:", response, status);
-      angular.forEach(response, function(child){
-        $scope.posts.push(child);
-      });
-    })
-    .error(function(response, status){
-      console.log("Errorrrr" + status + response);
-    })
-}
