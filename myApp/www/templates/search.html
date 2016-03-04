@@ -1,5 +1,9 @@
 <ion-view view-title="Search">
   <ion-content>
-    <h1>Search</h1>
+     <div class="list card" ng-repeat="post in posts">
+      <div class="item item-text-wrap">
+        <h2>{{post.title}}</h2>
+      </div>  
+    </div>
   </ion-content>
 </ion-view>

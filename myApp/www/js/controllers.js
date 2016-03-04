@@ -53,4 +53,20 @@ angular.module('starter.controllers', [])
 })
 
 .controller('PlaylistCtrl', function($scope, $stateParams) {
+})
+
+.controller('mycontroller', function($scope, $http) {
+  $scope.posts = [];
+var wordpressUrl = "http://www.theetuintantejansje.nl/wp-json/posts";
+
+  $http.get(wordpressUrl)
+    .success(function(response){
+      console.log("Reveived getPosts via HTTP: ", response, status);
+      angular.forEach(response, function(child){
+        $scope.posts.push(child);
+      });
+    })
+    .error(function(response, status){
+      console.log("Error while received response. " + status + response);
+    });
 });
