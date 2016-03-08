@@ -34,7 +34,52 @@ angular.module('theehuis', ['ionic', 'starter.controllers'])
     controller: 'AppCtrl'
   })
 
-  .state('app.search', {
+  .state('app.recepten', {
+    url: '/theehuis/recepten',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/recepten.html'
+      }
+    }
+  })
+
+   .state('app.routebeschrijving', {
+    url: '/theehuis/routebeschrijving',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/routebeschrijving.html'
+      }
+    }
+  })
+
+    .state('app.contact', {
+    url: '/theehuis/contact',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/contact.html'
+      }
+    }
+  })
+
+     .state('app.menukaart', {
+    url: '/theehuis/menukaart',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/menukaart.html'
+      }
+    }
+  })
+
+      .state('app.openingstijden', {
+    url: '/theehuis/openingstijden',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/openingstijden.html'
+      }
+    }
+  })
+
+    .state('app.search', {
     url: '/search',
     views: {
       'menuContent': {
@@ -52,7 +97,7 @@ angular.module('theehuis', ['ionic', 'starter.controllers'])
       }
     })
     .state('app.playlists', {
-      url: '/playlists',
+      url: '/theehuis',
       views: {
         'menuContent': {
           templateUrl: 'templates/playlists.html',
@@ -62,7 +107,7 @@ angular.module('theehuis', ['ionic', 'starter.controllers'])
     })
 
   .state('app.single', {
-    url: '/playlists/:playlistId',
+    url: '/theehuis/:playlistId',
     views: {
       'menuContent': {
         templateUrl: 'templates/playlist.html',
@@ -71,7 +116,7 @@ angular.module('theehuis', ['ionic', 'starter.controllers'])
     }
   })
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/playlists');
+  $urlRouterProvider.otherwise('/app/theehuis');
 })
 
 

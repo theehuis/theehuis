@@ -43,12 +43,11 @@ angular.module('starter.controllers', [])
 
 .controller('PlaylistsCtrl', function($scope) {
   $scope.playlists = [
-    { title: 'Reggae', id: 1 },
-    { title: 'Chill', id: 2 },
-    { title: 'Dubstep', id: 3 },
-    { title: 'Indie', id: 4 },
-    { title: 'Rap', id: 5 },
-    { title: 'Cowbell', id: 6 }
+    { title: 'Menu', id: 'menukaart' },
+    { title: 'Recepten', id: 'recepten' },
+    { title: 'Routebeschrijving', id: 'routebeschrijving' },
+    { title: 'Openingstijden', id: 'openingstijden' },
+    { title: 'Contact', id: 'contact' },
   ];
 })
 
@@ -57,7 +56,7 @@ angular.module('starter.controllers', [])
 
 .controller('mycontroller', function($scope, $http) {
   $scope.posts = [];
-var wordpressUrl = "http://www.theetuintantejansje.nl/wp-json/posts";
+var wordpressUrl = "http://www.theetuintantejansje.nl/wp-json/posts/";
 
   $http.get(wordpressUrl)
     .success(function(response){
