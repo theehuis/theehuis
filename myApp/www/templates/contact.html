@@ -3,7 +3,7 @@
      <div class="list card">
       <div ng-repeat="post in posts" class="item item-text-wrap" ng-post-title id="31" ng-if="post.meta">
       <h3>Contact</h3>
-        <p ng-bind-html-unsafe="myHtml">{{post.meta.appcontent}}</p>
+        <p ng-bind-html="post.meta.appcontent">{{post.meta.appcontent}}</p>
       </div>  
     </div>
   </ion-content>

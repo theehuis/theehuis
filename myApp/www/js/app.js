@@ -6,7 +6,7 @@
 // 'starter.controllers' is found in controllers.js
 
 
-angular.module('theehuis', ['ionic', 'starter.controllers'])
+angular.module('theehuis', ['ionic', 'starter.controllers','ngSanitize'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -118,6 +118,3 @@ angular.module('theehuis', ['ionic', 'starter.controllers'])
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/theehuis');
 })
-
-
-
