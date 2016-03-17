@@ -43,7 +43,7 @@ angular.module('theehuis', ['ionic', 'starter.controllers','ngSanitize'])
     }
   })
 
-   .state('app.routebeschrijving', {
+   .state('app.overons', {
     url: '/theehuis/routebeschrijving',
     views: {
       'menuContent': {
@@ -70,14 +70,6 @@ angular.module('theehuis', ['ionic', 'starter.controllers','ngSanitize'])
     }
   })
 
-      .state('app.openingstijden', {
-    url: '/theehuis/openingstijden',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/openingstijden.html'
-      }
-    }
-  })
 
     .state('app.search', {
     url: '/search',

@@ -43,10 +43,9 @@ angular.module('starter.controllers', [])
 
 .controller('PlaylistsCtrl', function($scope) {
   $scope.playlists = [
+    { title: 'Over ons', id: 'overons' },
     { title: 'Menu', id: 'menukaart' },
     { title: 'Recepten', id: 'recepten' },
-    { title: 'Routebeschrijving', id: 'routebeschrijving' },
-    { title: 'Openingstijden', id: 'openingstijden' },
     { title: 'Contact', id: 'contact' },
   ];
 })
